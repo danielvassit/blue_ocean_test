@@ -2,6 +2,8 @@ pipeline {
 
     stages {
         
+        agent any
+
         stage ('First') {
             steps {
                 sh "echo 'This is first stage'"
