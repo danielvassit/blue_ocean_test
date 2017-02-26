@@ -16,11 +16,13 @@ pipeline {
 
             steps {
                 sh "echo 'This is first stage'"
+                sh "echo $FOO"
             }
 
             post {
                 always {
                     echo "post"
+                    echo "$FOO"
                 }
             }
         }
