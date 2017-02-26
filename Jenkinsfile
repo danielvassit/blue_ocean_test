@@ -16,6 +16,11 @@ pipeline {
         }
 
         stage ('Second') {
+            
+            tools {
+                maven "mvn3.3.3"
+            }
+            
             steps {
                 sh "echo 'This is first stage'"
             }
