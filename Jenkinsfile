@@ -2,6 +2,10 @@ pipeline {
 
     agent any
 
+    environment {
+        FOO = "BAR"
+    }
+
     stages {
 
         stage ('First') {
@@ -12,6 +16,12 @@ pipeline {
 
             steps {
                 sh "echo 'This is first stage'"
+            }
+
+            post {
+                always {
+                    echo "post"
+                }
             }
         }
 
