@@ -3,17 +3,17 @@ pipeline {
     stages {
         
         stage ('First') {
-            step {
+            steps {
                 sh "echo 'This is first stage'"
             }
         }
 
         stage ('Second') {
-            step {
+            steps {
                 sh "echo 'This is first stage'"
             }
         }
-        
+
     }
 
 }
