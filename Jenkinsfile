@@ -16,6 +16,22 @@ pipeline {
             }
         }
 
+        stage ('Third') {
+            steps {
+                parallel(
+                    one: {
+                        echo "Parallel 1"
+                    },
+                    two: {
+                        echo "Parallel 2"
+                    },
+                    three: {
+                        echo "Parallel 3"
+                    }
+                )
+            }
+        }
+
     }
 
 }
